@@ -11,7 +11,14 @@ const express = require('express'),
 let app = express();
 app = config( app );
 
+//https://afternoon-hamlet-38670.herokuapp.com/posts
+
 app.get('/posts', function(req, res) {
+    console.log("posts!");
+    res.json({"success": true});
+});
+
+app.post('/add/post', function(req, res) {
     console.log("posts!");
     res.json({"success": true});
 });
